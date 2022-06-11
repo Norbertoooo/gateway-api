@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.vitu
+testFramework: junit
+sourceLanguage: java
+buildTool: maven
+features: [annotation-api, app-name, consul, discovery-consul, http-client, jackson-databind, java, java-application, junit, logback, maven, netty-server, readme, rxjava2, rxjava2-http-client, rxjava2-http-server-netty, shade, yaml]

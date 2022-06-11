@@ -1,0 +1,12 @@
+micronaut:
+  application:
+    name: gatewayApi
+netty:
+  default:
+    allocator:
+      max-order: 3
+consul:
+  client:
+    defaultZone: ${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}
+    registration:
+      enabled: true
