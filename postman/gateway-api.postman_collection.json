@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "6d18b7da-b530-46a4-a0d4-96005d8edfa2",
+		"name": "gateway-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6955661"
+	},
+	"item": [
+		{
+			"name": "efetuar venda",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"veiculoId\": \"1\",\r\n    \"cliente\": \"vitor\",\r\n    \"valor\": 50000.00,\r\n    \"quantidadeParcelas\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{gateway-host}}/loja-service/vendas",
+					"host": [
+						"{{gateway-host}}"
+					],
+					"path": [
+						"loja-service",
+						"vendas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inserir novo veiculo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"marca\": \"hyundai\",\r\n    \"modelo\": \"hb20\",\r\n    \"placa\": \"1234asdf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{gateway-host}}/veiculo-service/veiculos",
+					"host": [
+						"{{gateway-host}}"
+					],
+					"path": [
+						"veiculo-service",
+						"veiculos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "visualizar vendas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{gateway-host}}/loja-service/vendas",
+					"host": [
+						"{{gateway-host}}"
+					],
+					"path": [
+						"loja-service",
+						"vendas"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "gateway-host",
+			"value": "http://localhost:9999",
+			"type": "string"
+		}
+	]
+}
